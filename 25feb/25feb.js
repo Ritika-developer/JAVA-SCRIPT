@@ -1,6 +1,6 @@
 //events : action :- which is perfome by the user on our web page
 //mouse events :- onclick event
-
+//onContextmenu="fun()"  :- to right button of mouse 
 let btn=document.getElementById("btn")
 btn.style.backgroundColor="red"
 btn.style.color="white"
