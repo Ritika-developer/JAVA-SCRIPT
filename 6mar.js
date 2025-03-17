@@ -4,7 +4,7 @@ let age = document.querySelector("#age").value
 let email = document.querySelector("#email").value
 let pass = document.querySelector('#pass').value
 let contact = document.querySelector('#contact').value
-
+ 
 
 if(name==""){
     // alert("please input your name")
@@ -73,4 +73,5 @@ else if(contact.length>10 || contact.length<10){
     alert('please fill 10 digit number')
      document.querySelector('#contact').focus()
      return false
+}
 }

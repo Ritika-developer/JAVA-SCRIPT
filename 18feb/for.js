@@ -4,6 +4,8 @@
 //     console.log(a);
 // }
 
+
+
 //wap to print only odd number beetween 1 to 20
 
 
