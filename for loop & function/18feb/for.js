@@ -5,6 +5,9 @@
 // }
 
 
+// type of for loop
+//1. for,   for of ,    for in ,     for each ,   do while,   while
+
 
 //wap to print only odd number beetween 1 to 20
 

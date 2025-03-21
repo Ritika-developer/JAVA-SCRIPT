@@ -38,7 +38,7 @@ fun(argument)
 
 
 
-// 3. function fun(num)
+//3.ex:-  function fun(num)
 // {
 //   return num*num
 // }
@@ -56,10 +56,10 @@ fun(argument)
 //W.A.P to find area of circle using argument & return
 
 
-let r=parseInt(prompt("enter a number"))
- function fun(num)
-{
-//   return 2*3.14*r
-  return 3.14*r*r
-}
-console.log(fun(r))
+// let r=parseInt(prompt("enter a number"))
+//  function fun(r)
+// {
+// //   return 2*3.14*r
+//   return 3.14*r*r
+// }
+// console.log(fun(r))
