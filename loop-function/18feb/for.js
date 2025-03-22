@@ -19,9 +19,9 @@
 //  }
 
 
-//  for (let b=20;b>=1;b--){
-//     document.write("<h1>"+b+"</h1>")
-//     }
+ for (let b=20;b>=1;b--){
+    document.write("<h1>"+ b +"</h1>")
+    }
 
 
 
@@ -31,22 +31,19 @@ type of function :- pre define and user defined */
 
 
 
-// function Sum (){
-//     let a=10;
-//     let b=20;
-//     document.write(a+b);
-// }
-
-// Sum()
+function Sum (){
+    let a=10;
+    let b=20;
+    console.log(a+b);
+}
+Sum()
 
 
 function Table(){
     let t=parseInt(prompt("enter a number"))
 
-    for( i=1;i>=10;i++){
-        document.write(i*t);
+    for( let i=1;i<=10;i++){
+        console.log(i*t);
     }
 }
-
-
 Table()

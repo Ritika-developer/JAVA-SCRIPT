@@ -63,3 +63,35 @@ fun(argument)
 //   return 3.14*r*r
 // }
 // console.log(fun(r))
+
+
+
+
+
+//no argument & no return
+function fun(){
+let a =20;
+let b =30;
+console.log(a+b);
+
+}
+fun()
+
+
+//argument & return
+function fun1(a,b){
+return a+b
+}
+console.log(fun1(10,20));
+
+//no argument & return
+function fun2(){
+return "ritika"
+}
+console.log(fun2())
+
+//argument & no return
+function fun3(a,b){
+ console.log(a+b)
+}
+fun3(10,20)

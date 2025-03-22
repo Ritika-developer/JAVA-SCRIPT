@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #time {
+            font-size: 40px;
+        }
+        button {
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Stopwatch</h1>
+    <div id="time">0:00</div>
+    <button id="startStop">Start</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let minutes = 0;
+        let seconds = 0;
+
+        const timeDisplay = document.getElementById("time");
+        const startStopButton = document.getElementById("startStop");
+        const resetButton = document.getElementById("reset");
+
+        // Function to update the time display
+        function updateTimeDisplay() {
+            const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+            const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+            timeDisplay.textContent = `${formattedMinutes}:${formattedSeconds}`;
+        }
+
+        // Start or stop the stopwatch
+        startStopButton.addEventListener("click", function() {
+            if (isRunning) {
+                clearInterval(timer);
+                startStopButton.textContent = "Start";
+            } else {
+                timer = setInterval(function() {
+                    seconds++;
+                    if (seconds === 60) {
+                        seconds = 0;
+                        minutes++;
+                    }
+                    updateTimeDisplay();
+                }, 100);
+                startStopButton.textContent = "Stop";
+            }
+            isRunning = !isRunning;
+        });
+
+        // Reset the stopwatch
+        resetButton.addEventListener("click", function() {
+            clearInterval(timer);
+            isRunning = false;
+            minutes = 0;
+            seconds = 0;
+            updateTimeDisplay();
+            startStopButton.textContent = "Start";
+        });
+    </script>
+
+</body>
+</html>
