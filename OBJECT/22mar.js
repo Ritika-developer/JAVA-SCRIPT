@@ -11,6 +11,10 @@
 // console.log(ob.car[1]);
 
 
+
+
+// Merge
+
 // let ob1 = {
 //     name:"ritika",age:34,contact:432423
 // }
@@ -28,47 +32,69 @@
 
 
 
-//Inshort 
-let ob1 = {
-    name:"ritika",age:34,contact:432423
-}
-let ob2 = {
-    city:"bpl",state:"mp",...ob1
-}
+// //Inshort 
+// let ob1 = {
+//     name:"ritika",age:34,contact:432423
+// }
+// let ob2 = {
+//     city:"bpl",state:"mp",...ob1
+// }
 
-// add element 
+
+
+
+let ob1 = [1,2,"ritika",4,5]
+let ob2 = [...ob1,6,7,8,9,10]
 ob2.email = "ritika@gmail.com"
+ob2.email = "ritika1234@gmail.com"
+delete ob2.email
 
-//over write 
-ob2.city = "indore"
-
-//delete object
-delete ob2.state
+let ob3 = {
+    name : "ritika",
+    age : 20,
+    city : "bpl"
+}
+for(let k in ob3)
+    console.log(ob3[k]);    
 console.log(ob2);
 
-//key find karne kai liye
-let person = {
-    name : "ritika",
-    age:20,
-    contact:648732,
-    city:"bpl"
-}
+let k = Object.keys(ob3)
+console.log(k[2]);
 
-for(let k in person){
-    console.log(k);
-}
 
-//value print hogi
-for(let k in person){
-    console.log(person[k]);
-}
+// // add element 
+// ob2.email = "ritika@gmail.com"
 
-//VIP INTERVIEW QUESTION
-//Object ek key word h :- yeh ek array print kara kai daita ta 
-//single key print hogi 
-let k = Object.keys(person)
-console.log(k[0]);
+// //over write 
+// ob2.city = "indore"
 
-//yeh single value print karta h 
-let v = Object.values(person)
-console.log(v[0]);
+// //delete object
+// delete ob2.state
+// console.log(ob2);
+
+// //key find karne kai liye
+// let person = {
+//     name : "ritika",
+//     age:20,
+//     contact:648732,
+//     city:"bpl"
+// }
+
+// for(let k in person){
+//     console.log(k);
+// }
+
+// //key ki value print hogi
+// for(let k in person){
+//     console.log(person[k]);
+// }
+
+// //VIP INTERVIEW QUESTION
+// //Object ek key word h :- yeh ek array print kara kai daita ta 
+// //single key print hogi 
+// let k = Object.keys(person)
+// console.log(k[0]);
+
+// //yeh single value print karta h 
+// let v = Object.values(person)
+// console.log(v[0]);
