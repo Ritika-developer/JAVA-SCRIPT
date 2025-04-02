@@ -1,32 +1,33 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signin</title>
+    <title>signup</title>
     <style>
-        body{
-            background-color: yellow;
-        }
+        body { text-align: center; }
+        .container { width: 300px; margin: 50px auto; }
+        input { width: 50%; padding: 10px; margin: 5px 0; }
+        button { width: 50%; padding: 10px; background: blue; color: white; border: none; }
     </style>
-
 </head>
 <body>
     
 
-    <form action="login.html"  onsubmit="return signup()">
-        <label for="email">EMAIL ID </label>
-        <input type="email" placeholder="email id" id="email" >
+    <form action="" onsubmit="return signup()">
+        <h1>signup</h1>
+        <label for="">USERNAME</label>
+        <input type="text" placeholder="username" id="s_username" required>
         <br><br>
-
-        <label for="password">PASSWORD</label>
-        <input type="password" placeholder="password" id="password" >
-        <br><br>
-
-        <input type="submit">
+        <label for="">PASSWORD</label>
+        <input type="text" placeholder="password" id="s_password" required>
+        <input type="submit" value="signup">
     </form>
 
-
-    <script src="login.js"></script>
+  <script src="login-signup.js"></script>
 </body>
 </html>
