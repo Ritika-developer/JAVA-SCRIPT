@@ -52,10 +52,18 @@ let fetchData= async()=>{
             <td>${e.mobileno} </td>
             <td>${e.person} </td>
             <td>${e.price} </td>
+            <td onclick="del('${e.id}')">Delete</td>
             </tr>
         `
     })
 
     }
-    
+    //data ko delete karna h 
+    let del=(id)=>{
+
+        let url =`http://localhost:3000/whatsapp/${id}`
+
+        fetch(url,{method:"DELETE"})
+    }
+
     fetchData()

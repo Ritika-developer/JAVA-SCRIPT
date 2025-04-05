@@ -1,35 +1,16 @@
 {
-    "whatsapp":[
-        {
-            "name":"ritika",
-            "age":20,
-            "aadharn0":32847483289,
-            "checkin":"01-02-2025",
-            "checkout":"04-02-2025",
-            "mobileno":43284248,
-            "person":3,
-            "price":1500
-        },
-        {
-            "name":"saloni",
-            "age":20,
-            "aadharn0":32847483289,
-            "checkin":"01-02-2025",
-            "checkout":"04-02-2025",
-            "mobileno":43284248,
-            "person":5,
-            "price":2500
-        },
-        { 
-         "name":"shivani",
-        "age":24,
-        "aadharn0":32847483289,
-        "checkin":"01-02-2025",
-        "checkout":"04-02-2025",
-        "mobileno":432893348,
-        "person":4,
-        "price":2000
+  "whatsapp": [
+    {
+      "name": "ritika",
+      "age": 20,
+      "aadharn0": 32847483289,
+      "checkin": "01-02-2025",
+      "checkout": "04-02-2025",
+      "mobileno": 43284248,
+      "country":"india",
+      "person": 3,
+      "price": 1500,
+      "id": "3f5b"
     }
-    ]
+  ]
 }
-
