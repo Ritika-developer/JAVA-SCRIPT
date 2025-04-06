@@ -67,3 +67,25 @@ let fetchData= async()=>{
     }
 
     fetchData()
+
+
+    let name = document.getElementById('name').value
+    let age = document.getElementById('age').value
+    let aadharn0 = document.getElementById('adhar').value
+    let checkin = document.getElementById('checkin').value
+    let checkout = document.getElementById('checkout').value
+    let mobileno = document.getElementById('mobile').value
+    let country = document.getElementById('country').value
+    let person = document.getElementById('person').value
+
+    let ob = {
+        uname:name,
+        uage:age,
+        uadharn0:aadharn0,
+        ucheckin:checkin,
+        ucheckout:checkout,
+        umobileno:mobileno,
+        ucountry:country,
+        uperson:person
+    }
+localStorage.setItem("userdata",ob)
