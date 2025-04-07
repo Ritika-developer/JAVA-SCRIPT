@@ -46,12 +46,13 @@ let fetchData= async()=>{
             <tr>
             <td>${e.name} </td>
            <td>${e.age} </td>
-            <td>${e.aadharn0} </td>
+            <td>${e.aadharno} </td>
             <td>${e.checkin} </td>
             <td>${e.checkout} </td>
             <td>${e.mobileno} </td>
+            <td>${e.country}</td>
             <td>${e.person} </td>
-            <td>${e.price} </td>
+            <td>${e.price*e.person} </td>
             <td onclick="del('${e.id}')">Delete</td>
             </tr>
         `
@@ -66,26 +67,42 @@ let fetchData= async()=>{
         fetch(url,{method:"DELETE"})
     }
 
-    fetchData()
+    // fetchData():- isko body mai dal diya
 
 
-    let name = document.getElementById('name').value
-    let age = document.getElementById('age').value
-    let aadharn0 = document.getElementById('adhar').value
-    let checkin = document.getElementById('checkin').value
-    let checkout = document.getElementById('checkout').value
-    let mobileno = document.getElementById('mobile').value
-    let country = document.getElementById('country').value
-    let person = document.getElementById('person').value
 
-    let ob = {
-        uname:name,
-        uage:age,
-        uadharn0:aadharn0,
-        ucheckin:checkin,
-        ucheckout:checkout,
-        umobileno:mobileno,
-        ucountry:country,
-        uperson:person
+//post method 
+let book=()=>{
+    let inpname = document.getElementById('name').value
+    let inpage = document.getElementById('age').value
+    let inpaadharno = document.getElementById('adhar').value
+    let inpcheckin = document.getElementById('checkin').value
+    let inpcheckout = document.getElementById('checkout').value
+    let inpmobileno = document.getElementById('mobile').value
+    let inpcountry = document.getElementById('country').value
+    let inpperson = document.getElementById('person').value
+
+    let url = "http://localhost:3000/whatsapp"
+
+    fetch(url,{
+method:"POST",
+headers:{
+    "content-type":"application/json"
+},
+body:JSON.stringify(
+    {
+        "name":inpname,
+        "age":inpage,
+        "aadharno":inpaadharno,
+        "checkin":inpcheckin,
+        "checkout":inpcheckout,
+        "mobileno":inpmobileno,
+        "country":inpcountry,
+        "person":inpperson,
+        "price":500
     }
-localStorage.setItem("userdata",ob)
+)
+    })
+    location.href="prectice.html"
+    return false
+}
